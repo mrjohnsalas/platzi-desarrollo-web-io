@@ -1,0 +1,236 @@
+//INCLUDES
+@import "functions";
+
+//COLORS:
+$color-lightBlue: #f4fbff;
+$color-blue: #026fff;
+$color-white: white;
+$color-gray: gray;
+$color-strongGray: #1b2127;
+$color-lightGray: #fafafa;
+
+//BASE STYLES -->
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#{headings()} {
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 1.5;
+    letter-spacing: -.2px;
+    color: $color-white;
+    
+    & strong {
+        color: $color-blue;
+    }
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    color: $color-blue;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+}
+
+//<-- BASE STYLES
+
+// HEADER -->
+
+header {
+    background-color: $color-strongGray;
+    height: 70px;
+
+    & .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    & figure, .logo {
+        height: 50px;
+    }
+
+    & .menu {
+        height: inherit;
+
+        & ul {
+            display: flex;
+            padding: 0 10px;
+            height: inherit;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        & a {
+            color: $color-white;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+    }
+}
+
+// <-- HEADER
+
+// HERO -->
+
+.hero {
+    background-color: $color-strongGray;
+    height: 300px;
+
+    & .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    & figure {
+        height: inherit;
+    }
+
+    & .hero-img {
+        height: inherit;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+// <-- HERO
+
+// PORFOLIO -->
+
+.portfolio {
+    background-color: $color-lightGray;
+    padding: 20px;
+
+    & .container {
+        display: grid;
+    }
+
+    & .project {
+        background-color: $color-white;
+        border: 1px solid $color-gray;
+        border-radius: 10px;
+        padding: 20px;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+
+        & strong {
+            font-family: 'Fjalla One', sans-serif;
+        }
+    }
+
+    & .project-title {
+        font-size: 30px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+
+    & .project-date, .project-course, .project-url {
+        margin: 10px 0;
+    }
+
+    & .project-description {
+        font-size: 20px;
+    }
+
+    & .project-details, figure, .project-img {
+        width: 100%;
+    }
+}
+
+// <-- PORFOLIO
+
+// EXPERIENCE -->
+
+.experience {
+    padding: 20px;
+
+    & .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    & h2 {
+        grid-column: span 2;
+    }
+    
+    & .event {
+        background-color: $color-lightBlue;
+        margin: 1%;
+        margin-top: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    & figure, .event-img {
+        width: 100%;
+    }
+
+    & .event-details {
+        text-align: center;
+        padding: 20px;
+        background-color: $color-white;
+        margin: 20px;
+        margin-top: -40px;
+        position: relative;
+    }
+
+    & .event-description {
+        margin: 20px 0;
+    }
+
+    & .event-link {
+        border: 1px solid $color-blue;
+        padding: 5px 20px;
+        text-decoration: none;
+        color: $color-blue;
+        border-radius: 5px;
+        margin-top: 20x;
+    }
+}
+
+// <-- EXPERIENCE
+
+// CONTACT -->
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+// <-- CONTACT
+
+// FOOTER -->
+
+footer {
+
+}
+
+// <-- FOOTER
